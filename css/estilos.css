@@ -3,3 +3,14 @@
     margin: 0px;
     box-sizing: border-box;
 }
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    color: aliceblue;
+    background-color: black;
+}
