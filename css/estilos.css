@@ -50,11 +50,20 @@ header{
     align-items: center;
 }
 .item{
-    width: 90%;
+    width: 93%;
+    font-size: 1.2em;
 }
 .botones{
     padding: 10px;
     color: #fff;
+    border: 0px;
+    border-radius: 5px;
+}
+.btn-editar{
+    background-color: rgb(1, 61, 110);
+}
+.btn-validar{
+    background-color: green;
 }
 .form{
     display: flex;
@@ -77,4 +86,7 @@ header{
     color: #fff;
     font-size: 1em;
     font-weight: bold;
+}
+label{
+    font-size: 1.2em;
 }
