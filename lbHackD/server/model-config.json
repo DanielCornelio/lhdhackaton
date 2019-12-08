@@ -14,7 +14,7 @@
     ]
   },
   "task": {
-    "dataSource": "mysqlDs",
+    "dataSource": "MysqlDs",
     "public": true
   }
 }
