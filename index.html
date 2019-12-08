@@ -16,41 +16,29 @@
             <header class="header">
                     <h1>Task Manager</h1>
                 </header>
-                <section class="lista">
+                <section class="lista" v-if="!form_active">
                     <div class="container">
                         <div class="btn-agregar">
-                            <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"> Agregar</i></button>
+                            <button class="boton-agregar" @click="show_form"><i class="fa fa-plus-circle" aria-hidden="true"> Agregar</i></button>
                         </div>
                     <ul>
             
-                        <li><div class="item">item</div> 
+                        <li v-for="task in tasks"><div class="item">{{task.task}}</div> 
                             <div>
-                                <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
-                                <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-                          </div>
-                        </li>
-                      <li><div class="item">item</div> 
-                            <div>
-                              <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
-                                  <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-                          </div>
-                        </li>
-                      <li><div class="item">item</div> 
-                            <div>
-                              <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
-                                  <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                                <button class="botones" @click="edit(task)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
+                                <button class="botones" @click="validate(task)"><i class="fa fa-check-circle" :style="task.active?'color:green':''" aria-hidden="true"></i></button>
                           </div>
                         </li>
                   
                     </ul> 
                     </div>
                 </section>
-                <section class="formulario">
+                <section class="formulario" v-else>
                     <div class="container">
                         <div class="form">
                         <label>Nombre de la tarea:</label>
-                        <input type="text" class="form-input" name="nombretarea">
-                         <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"> Agegar</i></button>
+                        <input type="text" class="form-input" v-model="form.task" name="nombretarea">
+                         <button class="boton-agregar" @click="add"><i class="fa fa-plus-circle" aria-hidden="true"> Agegar</i></button>
                         </div>   
                     </div>
                 </section>
@@ -62,19 +50,45 @@
   el: '#app',
   data: {
     message: 'Hello Vue!',
+    form_active:false,
+    form:{
+        task:"",
+        active:true
+    },
     tasks:[
-
+{
+    task:"primera",
+    active:true
+},
+{
+    task:"segunda",
+    active:false
+},
+{
+    task:"tercera",
+    active:true
+}
     ]
   },
   methods:{
+      show_form(){
+          console.log("show form")
+          this.form_active = true;
+      },
      add(){
-         console.log("add")
+         console.log("add", this.form)
+         this.tasks.push({active: this.form.active, task:this.form.task});
+         this.form.task = "";
+         this.form_active = false;
      },
-     edit(){
+     edit(item, index){
          console.log("edit")
+         this.form_active = true;
+         this.form = item;
      },
-     validate(){
+     validate(item){
          console.log("validate")
+        item.active = !item.active;
      },
      update(){
         console.log("update")
