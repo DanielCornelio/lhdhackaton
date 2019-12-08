@@ -24,7 +24,7 @@ header{
     padding: 10px 0px;
     font-size: 1.2em;
     border-radius: 5px;
-    background-color:rgb(48, 96, 226);
+    background-color:rgb(1, 61, 110);
     border: 0px;
     color: #fff;
     font-weight: bold;
@@ -47,12 +47,14 @@ header{
     margin: 5px 0px;
     border: 1px solid rgb(219, 219, 219);
     display: flex;
+    align-items: center;
 }
 .item{
-    width: 85%;
+    width: 90%;
 }
 .botones{
     padding: 10px;
+    color: #fff;
 }
 .form{
     display: flex;
