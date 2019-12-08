@@ -1,6 +1,6 @@
 module.exports = function(app) {
     var ds = app.dataSources.MysqlDs;
-    var dbTables = ["task"]; // En este array pondremos los nombres de los modelos
+    var dbTables = []; // En este array pondremos los nombres de los modelos
     if(dbTables.length !== 0){
       ds.automigrate(dbTables, function(err) {
         if(err) throw err;
