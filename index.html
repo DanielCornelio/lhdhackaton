@@ -7,51 +7,81 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/flexboxgrid.min.css">
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-    <header class="header">
-        <h1>Task Manager</h1>
-    </header>
-    <section class="lista">
-        <div class="container">
-            <div class="btn-agregar">
-                <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-            </div>
-        <ul>
+<body >
+    <div id="app">
+            <header class="header">
+                    <h1>Task Manager</h1>
+                </header>
+                <section class="lista">
+                    <div class="container">
+                        <div class="btn-agregar">
+                            <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"> Agregar</i></button>
+                        </div>
+                    <ul>
+            
+                        <li><div class="item">item</div> 
+                            <div>
+                                <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
+                                <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                          </div>
+                        </li>
+                      <li><div class="item">item</div> 
+                            <div>
+                              <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
+                                  <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                          </div>
+                        </li>
+                      <li><div class="item">item</div> 
+                            <div>
+                              <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
+                                  <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                          </div>
+                        </li>
+                  
+                    </ul> 
+                    </div>
+                </section>
+                <section class="formulario">
+                    <div class="container">
+                        <div class="form">
+                        <label>Nombre de la tarea:</label>
+                        <input type="text" class="form-input" name="nombretarea">
+                         <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"> Agegar</i></button>
+                        </div>   
+                    </div>
+                </section>
+                <footer></footer>
+    </div>
+    
+    <script>
+        var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    tasks:[
 
-            <li><div class="item">item</div> 
-                <div>
-                  <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
-                      <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-              </div>
-            </li>
-          <li><div class="item">item</div> 
-                <div>
-                  <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
-                      <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-              </div>
-            </li>
-          <li><div class="item">item</div> 
-                <div>
-                  <button class="botones"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
-                      <button class="botones"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-              </div>
-            </li>
-      
-        </ul> 
-        </div>
-    </section>
-    <section class="formulario">
-        <div class="container">
-            <div class="form">
-            <label>Nombre de la tarea:</label>
-            <input type="text" class="form-input" name="nombretarea">
-             <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-            </div>   
-        </div>
-    </section>
-    <footer></footer>
+    ]
+  },
+  methods:{
+     add(){
+         console.log("add")
+     },
+     edit(){
+         console.log("edit")
+     },
+     validate(){
+         console.log("validate")
+     },
+     update(){
+        console.log("update")
+     }
+
+    }
+})
+    </script>
 </body>
 </html>
