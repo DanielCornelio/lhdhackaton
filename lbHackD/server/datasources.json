@@ -1,0 +1,12 @@
+{
+  "MysqlDs": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "hackd",
+    "password": "",
+    "name": "MysqlDs",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

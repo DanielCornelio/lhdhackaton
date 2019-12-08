@@ -8,28 +8,30 @@
     <link rel="stylesheet" href="css/flexboxgrid.min.css">
     <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Montserrat" rel="stylesheet">
     <title>Document</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        
+    <header class="header">
+        <h1>Task Manager</h1>
     </header>
     <section class="lista">
-            
-        <button><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></button>
+        <div class="container">
+            <div class="btn-agregar">
+                <button class="boton-agregar"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+            </div>
         <ul>
-            <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-            <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-            <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-            <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
-            <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+                <li>item</li><button><i class="fa fa-check-circle" aria-hidden="true"></i></button>
         </ul>
+        </div>
     </section>
-    <section class="formulario">
-        
+    <section class="formulario">    
             <label>Nombre de la tarea:</label>
             <input type="text" name="nombretarea">
-            <input type="submit" value="Agregar Tarea">      
-        
+            <input type="submit" value="Agregar Tarea">          
     </section>
     <footer></footer>
 </body>

@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    color: aliceblue;
+    background-color: black;
+}
+.btn-agregar{
+    display: flex;
+    justify-content: center;
+
+}
+.boton-agregar{
+    width: 40%;
+    padding: 10px 0px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.lista{
+    padding: 10px 0px;
+    margin-top: 60px;
+}
+.lista ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.lista ul li{
+    list-style: none;
+    padding: 10px 0px;
+}
